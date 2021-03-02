@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+    <title>Travelocity</title>
+    <!-- font -->
+    <script src="https://kit.fontawesome.com/7ffbaeea4e.js" crossorigin="anonymous"></script>
+    <!-- style -->
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <!-- script jQuery -->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/jquery-1.12.3.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/main.js"></script>
+    <!-- script -->
+    <script src="js/weather.js" defer></script>
+    <script src="js/imgpreview.js" defer></script>
+    <script src="js/booking.js" defer></script>
+    
+
+</head>
+
+<body>
+    <header>
+        <div class="center clearFix">
+            <h1 class="logo"><a href="#"><img src="imgs/logo.svg" alt="logo"></a></h1>
+
+            <ul class="gnb">
+                <!-- <li><a href="#"><i class="fas fa-bars"></i></a></li> -->
+                <li class="user"><a href="#void"><i class="far fa-user"></i></a></li>
+                <li><a href="#"><i class="fas fa-globe"></i></a></li>
+            </ul>
+            <ul class="topSns">
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+        </div>
+        <div class="member">
+            <button class="xbtn"><i class="fas fa-times"></i></button>
+            <h2>Sign In</h2>
+            <div class="memberWrap">
+
+            <button class="google">Connect with Google</button><br>
+            <button class="facebook">Connect with Facebook</button>
+            <hr>
+            <form action="">
+                <input type="text" placeholder="Email Address" id="uId"><br>
+                <input type="text" placeholder="Password" id="uPass">
+                <div class="rememberme">
+                    <input type="checkbox" id="remember">
+                    <label for="remember">remember me</label>
+                </div>
+                
+                <p><a href="#">Forgot your password?</a></p>
+                <input type="submit" value="Sign in" id="sign"><br>
+                <input type="button" value="Creat an account" id="acc">
+            </form>
+
+            </div>
+        </div>
+
+    </header>
+    <div class="containers">
+        <section id="reservation">
+            <h2 class="blind">reservation</h2>
+            <ul class="visual clearFix">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+
+            <div class="center">
+                <ul class="book">
+                    <li class="active">
+                        <a href="#"><i class="fas fa-building"></i></a>
+
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-plane"></i></a>
+
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-suitcase-rolling"></i></a>
+
+                    </li>
+                </ul>
+                <div class="container booksub">
+                    <div class="row booksub1">
+                        <div class="sub1 col-md-4 col-sm-12">
+                            <div class="row">
+                                <div class="col-12">location</div>
+                                <div class="col-12 location">
+                                    <form>
+                                        <input type="text" placeholder="where are you going">
+                                    </form>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="sub2 col-md-3 col-sm-12">
+                            <div class="row">
+                                <div class="col-12">Check In</div>
+                                <div class="col-12 checkin">
+                                    <input type="text" id="from" value="Add date">
+                                </div>
+                            </div>
+                        </div>  
+                        <div class="sub3 col-md-3 col-sm-12">
+                            <div class="row">
+                                <div class="col-12">Check Out</div>
+                                <div class="col-12 checkout">
+                                    <input type="text" id="to" value="Add date">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sub4 col-md-2 col-sm-12">
+                            <div class="row">
+                                <div class="col-12">Guests</div>
+                                <div class="col-12 addGuests"> <span>Add</span> guests</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+                <!-- <div class="calLeft clearFix">
+                    <div class="cal">
+                        <h5 class="calTitle"></h5>
+                        <div class="caleander"></div>
+                        <div class="calBtn">
+                            <button class="calPrev"><img src="imgs/board_btn_prev.png" alt=""></button>
+                            <button class="calNext"><img src="imgs/board_btn_next.png" alt=""></button>
+                        </div>
+                        
+
+                    </div>
+                    
+                </div> -->
+                <!-- <div class="calRight">
+                    <div class="cal">
+                        <h5 class="calTitle2"></h5>
+                        <div class="caleander2"></div>
+                        <div class="calBtn">
+                            <button class="calPrev2"><img src="imgs/board_btn_prev.png" alt=""></button>
+                            <button class="calNext2"><img src="imgs/board_btn_next.png" alt=""></button>
+                        </div>
+                        
+
+                    </div>
+                </div> -->
+        
+                    <ul class="guests">
+                        <li>
+                            <div class="ppl">Adult</div>
+                            <div class="number1">
+                                <button class="remove"><i class="fas fa-minus-circle"></i></button>
+                                <span class="num">0</span>
+                                <button class="add"><i class="fas fa-plus-circle"></i></button>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="ppl">Childeren</div>
+                            <div class="number2">
+                                <button class="remove"><i class="fas fa-minus-circle"></i></button>
+                                <span class="num">0</span>
+                                <button class="add"><i class="fas fa-plus-circle"></i></button>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="ppl">Infant</div>
+                            <div class="number3">
+                                <button class="remove"><i class="fas fa-minus-circle"></i></button>
+                                <span class="num">0</span>
+                                <button class="add"><i class="fas fa-plus-circle"></i></button>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="ppl">Pets</div>
+                        </li>
+                    </ul>
+                
+
+            </div>
+
+
+        </section>
+        <section id="destination" class="center">
+            <h2 class="title">Find the perfect destination</h2>
+            <ul class="category">
+                <li class="active"><a href="#void">
+
+                        <i class="fas fa-university"></i>
+                        <p>Urban</p>
+
+
+                    </a></li>
+                <li><a href="#void">
+                        <i class="fas fa-umbrella-beach"></i>
+                        <p>Coastal</p>
+                    </a></li>
+                <li><a href="#void">
+                        <i class="fas fa-torii-gate"></i>
+                        <p>Historic</p>
+                    </a></li>
+                <li><a href="#void" >
+                        <i class="fas fa-mountain"></i>
+                        <p>Natural</p>
+                    </a></li>   
+            </ul>
+            <div class="dWrap">
+                <ul class="ddd dPhotos1">
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+                <ul class="ddd dPhotos2">
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+                <ul class="ddd dPhotos3">
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+                <ul class="ddd dPhotos4">
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </div>
+        </section>
+        <section id="banner">
+            <h2 class="blind">banner</h2>
+            <div class="center clearFix">
+              <div class="weather">
+                <input type="text" autocomplete="off" class="search-box" 
+                placeholder="Search for a city...">
+                <div class="weatherBox">
+                    <div class="location">
+                        <div class="city">Northampton, GB</div>  
+                        <div class="date">Thursday 10 January 2020</div> 
+                        <div class="current">
+                            <div class="temp">15 <span>°c</span></div>
+                            <div class="weather_el">Sunny </div>
+                            <div class="weatherIcon"><img src="weather/01d.svg" alt="weatherIcon"></div>
+                            <div class="hi-low">13°c/ 16°c</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+              
+              </div>
+        </section>
+        <section id="nextTrip">
+            <div class="inner clearFix">
+                <h2 class="bigTitle">Inspiration <br>
+                    For Next trip</h2>
+                <div class="tripWrap">
+                    <div class="wrap1 clearFix">
+                        <ul class="trip1">
+                            <li><a href="#"><img src="imgs/paris.jpg" alt=""></a></li>
+                            <li><a href="#"><img src="imgs/turky.jpg" alt=""></a></li>
+                            <li><a href="#"><img src="imgs/london.jpg" alt=""></a></li>
+                        </ul>
+                    </div>
+                    <div class="wrap2 clearFix">
+                        <ul class="trip2">
+                            <li><a href="#"><img src="imgs/turky.jpg" alt=""></a></li>
+                            <li><a href="#"><img src="imgs/london.jpg" alt=""></a></li>
+                            <li><a href="#"><img src="imgs/paris.jpg" alt=""></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="wrap3 clearFix">
+                        <ul class="trip3">
+                            <li><a href="#"><img src="imgs/london.jpg" alt=""></a></li>
+                            <li><a href="#"><img src="imgs/paris.jpg" alt=""></a></li>
+                            <li><a href="#"><img src="imgs/turky.jpg" alt=""></a></li>
+                        </ul>
+
+                    </div>
+
+
+                </div>
+                <ul class="tripBtn">
+                    <li class="leftBtn"><a href="#void"></a></li>
+                    <li class="rightBtn"><a href="#void"></a></li>
+                </ul>
+
+            </div>
+
+
+        </section>
+        <section id="rentals">
+            <h2 class="title">Explore more travel vacation rentals</h2>
+            <div class="rentalWrap center clearFix">
+                <div class="rentalImg"><a href="#"></a></div>
+                <ul class="rental_categories">
+                    <li>
+                        <a href="#"></a>
+                        <div class="retnal_text">
+                            <strong>Private Villas </strong>
+                            <p>156,123 propertise</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"></a>
+                        <div class="retnal_text">
+                            <strong>Vacations Rentals</strong>
+                            <p>156,123 propertise</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"></a>
+                        <div class="retnal_text">
+                            <strong>Hotels</strong>
+                            <p>156,123 propertise</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"></a>
+                        <div class="retnal_text">
+                            <strong>Apartment</strong>
+                            <p>156,123 propertise</p>
+                        </div>
+                    </li>
+                </ul>
+
+
+            </div>
+        </section>
+        <section id="sns">
+            <div class="center">
+                <h2 class="title">#Travelocity</h2>
+                <p class="subTitle">Share us your travel and tag @travelocity #travelocity
+                    <span class="add"><a href="#void">Add Your Own</a></span>
+                </p>
+                <div class="addfile">
+                    <button class="addfile_close"><i class="fas fa-times"></i></button>
+                    
+                        <input type="file" id="imagefile" class="fileupload" accept="img/*" onchange="setThumbnail(event);"/>
+
+                    <div id="imgPreview">
+                        
+                    </div>
+                </div>
+
+            </div>
+            <div class="snsWrap">
+                <ul>
+                    <li class="sns1"><a href="#"></a></li>
+                    <li class="sns2"><a href="#"></a></li>
+                    <li class="sns3"><a href="#"></a></li>
+                    <li class="sns4"><a href="#"></a></li>
+                    <li class="sns5"><a href="#"></a></li>
+                    <li class="sns6"><a href="#"></a></li>
+                    <li class="sns6"><a href="#"></a></li>
+                    <li class="sns8"><a href="#"></a></li>
+                    <li class="sns9"><a href="#"></a></li>
+                    <li class="sns10"><a href="#"></a></li>
+                    <li class="sns11"><a href="#"></a></li>
+                    <li class="sns12"><a href="#"></a></li>
+                    <li class="sns13"><a href="#"></a></li>
+                    <li class="sns14"><a href="#"></a></li>
+                    <li class="sns15"><a href="#"></a></li>
+                </ul>
+                <div class="snsBtn">
+                    <button class="snsLeft">left</button>
+                    <button class="snsRight">left</button>
+
+                </div>
+
+            </div>
+        </section>
+    </div>
+    <footer>
+
+        <div class="footerTop">
+            <div class="center">
+                <div class="signupWrap">
+                    <h4>Sign Up & Get the Inside Scoop</h4>
+                    <p>Hello my love! Get the latest beauty news straight to your inbox. Can't wait to connect!</p>
+                    <form>
+                        <input type="text" placeholder="What's your email?">
+                        <span class="submit"><a href="#">Submit</a></span>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        <div class="footerBottom">
+            <div class="center clearFix">
+                <ul class="footMenu">
+                    <li>
+                        <a href="#">Account</a>
+                        <ul>
+                            <li><a href="#">My Account</a></li>
+                            <li><a href="#">Check Out</a></li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">About Us</a>
+                        <ul>
+                            <li><a href="#">About Travelocity</a></li>
+                            <li><a href="#">About WISHFUL</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Customer Service</a>
+                        <ul>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Support</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="connect">
+                    <p>Connect</p>
+                    <ul>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                        <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                    </ul>
+                </div>
+                <div class="top"><a href="#">top</a></div>
+
+            </div>
+        </div>
+
+    </footer>
+</body>
+
+</html>
